@@ -62,11 +62,23 @@ a, a:hover, a:focus, a:active, a:visited {
     color: var(--redPrimary);
 }
 
-.shortAbout a:hover,
-.shortPortfolio a:hover,
-.shortExperience a:hover {
+.shortAbout:hover,
+.shortPortfolio:hover,
+.shortExperience:hover {
     transform: scale(1.2);
-    color: var(--redSecondary);
+    color: var(--redTertiary);
+    background: var(--redSecondary);
+}
+
+.shortAbout :not(:hover),
+.shortPortfolio :not(:hover), 
+.shortExperience :not(:hover) {
+    background: var(--redTertiary);
+    color: var(--redPrimary);
+} 
+
+.toTop a:hover {
+  text-decoration: underline;
 }
 
 .headline, 
@@ -85,6 +97,14 @@ p.strapline {
     padding: 2% 40%;
 }
 
+.toTop {
+    position: fixed;
+    margin-left: 88vw;
+    margin-top: 60vh;
+    background-color: var(--redPrimary);
+    padding: 2%;
+}
+
 /* COVER END*/
 
 /* ABOUT ME */
@@ -98,7 +118,12 @@ h2 {
 
 h3 {
     font-size: 2rem;
-    padding: var(--thirtyPadding)
+    padding: var(--thirtyPadding);
+}
+
+h4 {
+    font-size: 2rem;
+    text-align: center;
 }
 
 p.introText {
