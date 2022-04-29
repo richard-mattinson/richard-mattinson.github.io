@@ -79,6 +79,7 @@ a, a:hover, a:focus, a:active, a:visited {
 
 .toTop a:hover {
   text-decoration: underline;
+  font-weight: 700;
 }
 
 .headline, 
@@ -188,6 +189,16 @@ p.introText {
     place-content: center;
     height: 40px;
     margin: 5% 0%;
+}
+
+a.readMore {
+    color: var(--redTertiary);
+}
+
+.readMore:hover {
+    background: var(--redTertiary);
+    color: var(--redPrimary);
+    font-weight: 700;
 }
 
 .git {

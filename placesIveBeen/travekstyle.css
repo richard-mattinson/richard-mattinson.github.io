@@ -1,0 +1,207 @@
+/* Comments */
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    background: linear-gradient(35deg, darkorange, orange);
+    color: white;
+}
+
+body{
+    font-family:arial;
+    color:slategray;
+}
+
+h1{
+    font-size:300%;
+    padding-top:20px;
+}
+
+h2{
+    font-size:250%;
+    color:darkorange;
+}
+
+h1,h2{
+    text-transform:uppercase;
+    font-weight:600; 
+    padding-left:5%;
+}
+
+#js-button {
+    position:fixed;
+    top:3%;
+    right:2%;
+    background-color: slategray;
+    color: white;
+    border-radius: 10%;
+}
+
+#js-button:hover {
+    color:orange;
+    transform: scale(1.1);
+}
+
+.intro {
+    float:left;
+    width:60%;
+}
+
+.sidenav {
+    float:right;
+    width: 25%;
+    position: fixed;
+    right: 1%;
+    background-color: slategray;
+    color: white;
+    text-align: left;
+}
+
+.intro, .sidenav {
+    padding:3%;
+}
+
+img{
+    width:100%;
+}
+
+.container {
+    position:relative;
+    text-align:center;
+    color:white;
+}
+
+.centre {
+    position: absolute;
+    font-size:6vw;
+    top:85%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background-color: rgba(112, 128, 144, 0.7);
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#maintext{
+    text-align: left;
+    margin: auto;
+    width: 60%;
+    padding-bottom:20px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+nav {
+    background-color: slategray;
+    color: whitesmoke;
+    text-align:center;
+    font-weight: 700;
+    font-size: 200%;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    width: 100%
+}
+/* IS THERE A WAY TO APPLY BORDER IN NAV SO MOUSEOVER DOESN'T JUMP? */
+#places:hover {
+    color:orange;
+    transform: scale(1.3)
+}
+
+footer div{
+    background-color: darkorange;
+    color:white;
+    text-align:center;
+    margin-top: 4vh;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    width: 100%
+}
+
+/* INDEX ONLY */
+
+#homefooter {
+    clear:both;
+    position: relative;
+    bottom:1%;
+}
+
+#indextext{
+    text-align: left;
+    margin: auto;
+    width: 60%;
+    padding-bottom:40px;
+    font-size: 150%;
+}
+
+#menu {
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+#indexplaces:hover {
+    color:orange;
+    transform: scale(1.1)
+    }
+
+.indeximage {
+    padding: 1%;
+} 
+
+.indeximage:hover {
+    transform: scale(1.1);
+}
+
+/* INDEX END */
+
+@media screen and (max-width:768px) {
+    
+    #maintext {
+        width: 80%;
+        padding-bottom: 10px;
+    }    
+
+    #js-button {
+        font-size: 60%;
+    }
+
+    h1 {font-size:200%;
+    }
+
+    h2 {font-size:150%;
+    }
+    
+    .row .column-2 {
+        flex:2;
+    }
+
+    .column {
+        padding:2px
+    }    
+
+    nav {
+        font-size:100%;
+    }
+
+    #places:hover {
+        border-radius: 2px;
+        border-width: 2px;
+        }
+
+    #indextext{
+        width: 80%;
+        padding-bottom:20px;
+        font-size: 100%;
+    }
+
+    #indexplaces{
+        font-size: 80%;
+    }
+
+}
