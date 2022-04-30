@@ -29,7 +29,7 @@ a, a:hover, a:focus, a:active, a:visited {
 
 .cover {
     background: var(--redPrimary);
-    color: var(--redTertiary);
+    color: var(--redPrimary);
     padding-bottom: 100px;
     height: 100vh
 }
@@ -46,6 +46,7 @@ a, a:hover, a:focus, a:active, a:visited {
     place-items: center;
     font-size: 2rem;
     padding-left: 2%;
+    color: var(--redTertiary);
 }
 
 .shortAbout,
@@ -77,14 +78,10 @@ a, a:hover, a:focus, a:active, a:visited {
     color: var(--redPrimary);
 } 
 
-.toTop a:hover {
-  text-decoration: underline;
-  font-weight: 700;
-}
-
 .headline, 
 .strapline {
     text-align: center;
+    color: var(--redTertiary);
 }
 
 h1 {
@@ -103,7 +100,13 @@ p.strapline {
     margin-left: 88vw;
     margin-top: 60vh;
     background-color: var(--redPrimary);
+    color: var(--redTertiary);
     padding: 2%;
+}
+
+.toTop a:hover {
+  text-decoration: underline;
+  font-weight: 700;
 }
 
 /* COVER END*/
@@ -302,5 +305,32 @@ footer {
     }
 }
 
+@media screen and (max-width: 500px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .toTop {
+        display: none;
+    }
+
+    .navigation {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .shortAbout,
+    .shortPortfolio,
+    .shortExperience {
+        display: none;
+    }
+
+    .langauges {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        font-size: 1.3rem;
+    }
+    
+}
 
 
