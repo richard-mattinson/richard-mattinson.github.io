@@ -31,7 +31,7 @@ a, a:hover, a:focus, a:active, a:visited {
     background: var(--redPrimary);
     color: var(--redPrimary);
     padding-bottom: 100px;
-    height: 100vh
+    height: minmax(100vh, auto-fit);
 }
 .navigation {
     display: grid;
