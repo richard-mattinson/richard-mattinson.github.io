@@ -143,8 +143,20 @@ header {
     color: var(--redSecondary);
 }
 
-.home:active,
-.explore:active,
+.home :not(:hover),
+.explore :not(:hover),
+.notifications :not(:hover),
+.messages :not(:hover),
+.bookmarks :not(:hover),
+.lists :not(:hover),
+.profile :not(:hover),
+.more :not(:hover)
+{
+    color: black;
+}
+
+.home:visited,
+.explore:visited,
 .notifications:active,
 .messages:active,
 .bookmarks:active,
@@ -310,6 +322,7 @@ em {
     background: var(--redTertiary);
     border-radius: 10px;
     padding: 5%;
+    margin-left: 5px;
 }
 
 .honkening {
@@ -327,8 +340,84 @@ em {
 
 /* ASIDE WHATS HAPPENING ENDS */
 
-@media screen and (max-width: 800px) {
+footer {
+    display: none;
+}
 
+/* under construction */
+
+.uc {
+    background: #3C6BD5;
+}
+
+.goose {
+    width: 100%;
+}    
+
+.goose img {
+        height: 100vh;
+    }
+/* under construction ends */
+
+@media screen and (max-width: 1100px) {
+    body, 
+    header {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .whatsHonkening {
+        display: none;
+    }
+
+    .container {
+        grid-template-columns: 200px 1fr;
+    }
+
+    .search {
+        display: none;
+    }
+
+    header {
+        grid-template-columns: 200px 1fr;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .folders {
+        display: none;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        grid-template-columns: 200px 1fr;
+    }
+
+    footer {
+        position: fixed;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        place-items: center;
+        padding: 10px;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background: white;
+    }
+
+    footer img {
+        width:20px;
+        opacity: 0.5;
+    }
+
+    .container {
+        padding: 100px 0px 30px 0px;
+    }
 }
 
 
