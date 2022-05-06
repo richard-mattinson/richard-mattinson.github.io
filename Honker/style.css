@@ -37,12 +37,13 @@ body {
 header {
     position: fixed;
     display: grid;
-    grid-template-columns: 200px 1fr 300px;
+    grid-template-columns: 300px 1fr 300px;
     background-color: var(--redSecondary);
     top: 0;
     right: 0;
     left: 0;
     padding: var(--tenPadding);
+    z-index: 1;
 }
 
 .logo {
@@ -99,24 +100,42 @@ header {
                     /* HEADER ENDS */
 
 .container {
+    overflow: hidden;
     display: grid;
-    grid-template-columns: 200px 1fr 300px;
+    grid-template-columns: 200px auto 300px;
     padding: 100px 0px 0px 0px;
-    min-height: 100vh;
+    height: 100vh;
 }
 
-/* ASIDE FOLDERS */
-
+                    /* FOLDERS */
 .folders {
+    justify-self: left;
     display: grid;
-    grid-auto-rows: 60px;
-    padding-left: 40px;
+    grid-template-rows: repeat(9, 60px) auto 60px;
     padding-top: 10px;
 }
 
 .folders img {
-    width: 20px;
     margin-right: 5px;
+}
+
+.user {
+    display: grid;
+    grid-template-columns: 50px 1fr 5px;
+}
+
+.userPortrait {
+    width: 50px;
+    padding-right: 10px;
+    border-radius: 50%;
+}
+
+.userEllipsis {
+    width: 20px
+}
+
+.userText {
+    font-weight: 400;
 }
 
 .home,
@@ -129,49 +148,45 @@ header {
 .more {
     display: flex;
     align-items: center;
+    padding-left: 40px;
 }
 
-.home:hover,
-.explore:hover,
-.notifications:hover,
-.messages:hover,
-.bookmarks:hover,
-.lists:hover,
-.profile:hover,
-.more:hover
-{
+.home img,
+.explore img,
+.notifications img,
+.messages img,
+.bookmarks img,
+.lists img,
+.profile img,
+.more img {
+    width: 20px;
+}
+
+a:visited {
+    color: var(--redPrimary);
+    font-weight: 700;
+} 
+a:hover {
     color: var(--redSecondary);
 }
 
-.home :not(:hover),
-.explore :not(:hover),
-.notifications :not(:hover),
-.messages :not(:hover),
-.bookmarks :not(:hover),
-.lists :not(:hover),
-.profile :not(:hover),
-.more :not(:hover)
-{
-    color: black;
+a:active {
+    text-transform: capitalize;
+    font-size: 150%;
 }
 
-.home:visited,
-.explore:visited,
-.notifications:active,
-.messages:active,
-.bookmarks:active,
-.lists:active,
-.profile:active,
-.more:active
-{
-    color: var(--redPrimary);
-}
 
-                    /* ASIDE FOLDERS END */
+                    /* FOLDERS END */
 
-                    /* SECTION WALL */
+                    /* WALL */
 .wall {
+    overflow-y: scroll;
+    justify-self: center;
     padding: 3%;
+}
+
+.wall::-webkit-scrollbar {
+    display: none;
 }
 
 /* POST BAR */
@@ -249,13 +264,21 @@ margin-right: 5px;
 }
 
 .postHonk {
-    border: solid --redPrimary 2px;
-    border-radius: 5px;
+    border: solid var(--redPrimary) 2px;
+    border-radius: 50px;
     background: var(--redPrimary);
     color: var(--redTertiary);
     display: flex;
     place-content: center;
 }
+
+.postHonk:hover {
+    border: solid var(--redTertiary) 2px;
+    background: var(--redTertiary);
+    color: var(--redPrimary);
+    font-weight: 700;
+}
+
 /* POST BAR ENDS */
 
 /* TIMELINE */
@@ -280,6 +303,10 @@ margin-right: 5px;
     border-radius: 50%;
 }
 
+.post img {
+    width: 300px;
+}
+
 .reactions {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -290,6 +317,10 @@ margin-right: 5px;
 .reactions img{
     width:23px;
     opacity: 0.3;
+}
+
+.reactions img:hover{
+    opacity: 0.7;
 }
 
 .post {
@@ -315,14 +346,16 @@ em {
 
 /* TIMELINE ENDS */
 
-                    /* SECTION WALL ENDS */
+                    /* WALL ENDS */
 
-/* ASIDE WHATS HAPPENING */
+                    /* WHATS HAPPENING */
 .whatsHonkening {
+    justify-self: right;
     background: var(--redTertiary);
     border-radius: 10px;
     padding: 5%;
     margin-left: 5px;
+    margin-bottom: 20px;
 }
 
 .honkening {
@@ -338,7 +371,11 @@ em {
     border-radius: 5px;
 }
 
-/* ASIDE WHATS HAPPENING ENDS */
+.elipsis  {
+    width: 20px !important;
+    justify-self: end;
+}
+                    /* WHATS HAPPENING ENDS */
 
 footer {
     display: none;
@@ -359,6 +396,7 @@ footer {
     }
 /* under construction ends */
 
+/* MEDIA SCREEN */
 @media screen and (max-width: 1100px) {
     body, 
     header {
@@ -367,7 +405,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 950px) {
     .whatsHonkening {
         display: none;
     }
@@ -415,10 +453,15 @@ footer {
         opacity: 0.5;
     }
 
+    footer img:hover{
+        opacity: 0.9;
+    }
+
     .container {
         padding: 100px 0px 30px 0px;
     }
 }
+/* MEDIA SCREEN ENDS */
 
 
 
