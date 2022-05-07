@@ -1,0 +1,130 @@
+/* Global */
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+* {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    padding:0;
+}
+
+h1 {
+    font-weight: bold;
+    display: inline;
+}
+
+h2 {
+    color: rgba(7,124,170,1);
+}
+
+ul {
+    list-style: none;
+}
+
+i {
+    font-style: italic;
+} 
+/* Global ENDS */
+
+.main, .followUs, .testimonials, .locations {
+    margin-left: 30px;
+}
+
+/* Nav */
+nav {
+    background: rgba(7,124,170,1);
+    color: white;
+    padding: 10px 10px;
+}
+
+nav li {
+    display: inline;
+    padding-right:10px;
+}
+/* Nav Ends */
+
+/* Main */
+b {
+    color: rgba(7,124,170,1);
+}
+
+.membership {
+    border: solid orange 2px;
+    border-radius: 5px;
+    color: orange;
+    text-transform: uppercase;
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+}
+/* Main ENDS */
+
+/* Follow Us */
+.socialInsta,
+.socialFacebook,
+.socialYoutube {
+    color: white;
+    border: solid black 2px;
+    border-radius: 10px;
+    display: inline;
+    margin-right: 20px;
+    padding: 10px;
+    box-shadow: 2px 3px rgba(0, 0, 0, 0.2)
+}
+
+.socialInsta {
+    background: rgb(138, 58, 185)
+}
+.socialFacebook {
+    background: rgb(66, 103, 178);
+}
+.socialYoutube {
+    background: rgb(255, 0, 0);
+}
+/* Follow Us END */
+
+/* Testimonials */
+.testimonials {
+    padding-top: 20px;
+}
+
+.testrow, .locationrow {
+    display:flex;
+    max-width:80%;
+}
+
+.test1, .test2, .test3, .loc1, .loc2, .loc3 {
+    flex:1;
+    padding: 30px;
+    background: rgba(7,124,170,0.6);
+    color: white;
+    font-size: 1.3em;
+    margin-right: 5px;
+}
+
+img {
+    width:100%;
+    display: block;
+    padding: 10px 0px;
+}
+
+/* Testimonials END */
+
+/* Popular Features */
+.popularFeatures {
+    background: rgba(7,124,170,1);
+    color: white;
+    padding: 5px 20px;
+    display: block;
+    margin: 30px 0px;
+}
+
+.branches {
+    padding-left: 20px;
+}
+
+ul li.popBullets {
+    font-weight: bold;
+}
+/* Popular Features END */
