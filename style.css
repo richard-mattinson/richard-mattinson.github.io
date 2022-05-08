@@ -28,8 +28,7 @@ header, footer {
 
 header {
     position: fixed;
-    display: grid;
-    grid-template-columns: min-content 1fr 60px;
+    display: flex;
     align-items: center;
     padding-right: 15px;
 }
@@ -40,6 +39,17 @@ footer {
     height: 60px;
     align-content: center;
     padding: 2%;
+}
+
+.rmlogo {
+    display: flex;
+    justify-items: start;
+}
+
+.github-main-logo {
+    display: flex;
+    width: 100%;
+    justify-content: end;
 }
 
 header img {
