@@ -54,7 +54,7 @@ header img {
 }
 
 .github-main-logo img:hover { 
-    border: solid white 3px;
+    border: solid white 2px;
 }
 
 /* HEADER & FOOTER END */
@@ -96,7 +96,7 @@ header img {
 #wall {
     display: grid;
     grid-template-columns: repeat(auto-fit, 300px);
-    grid-auto-rows: 500px;
+    grid-auto-rows: auto;
     margin: 100px 50px;
     grid-gap: 20px;
     justify-content: center;
@@ -152,15 +152,43 @@ h2:hover {
     text-decoration:underline;
 }
 
-  p {
-      padding: 3%;
-      display: flex;
-      align-content: center;
-  }
+b {
+    display: inline;
+}
+
+p {
+    padding: 3% 3% 7% 3%;
+    /* display: flex;
+    align-content: center; */
+}
 
   /* INDEX ENDS */
 
   @media screen and (max-width: 900px) {
+
+    .project-gallery {
+        font-size:6vw;
+    }
+
+    /* #fullscreen {
+        display: none;
+    }
+    
+    #mobile {
+        padding-top: 50px;
+        width: 100%;
+        height: 100vh;
+        opacity: 0.1;
+    } */
+
+  }
+
+  @media screen and (max-width: 500px) {
+
+    .github-main-logo img {
+        display: none;
+    }
+
 
     .project-gallery {
         font-size:8vw;
