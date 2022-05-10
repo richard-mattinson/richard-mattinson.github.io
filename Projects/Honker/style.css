@@ -8,14 +8,14 @@ a, a:hover, a:focus, a:active {
     padding:0;
     margin:0;
     box-sizing: border-box;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
 }
 
 :root {
-    --redPrimary: rgb(117, 19, 20);
-    --redSecondary: rgb(223, 151, 152);
-    --redTertiary: rgb(240, 215, 215);
+    --redPrimary: rgb(60, 107, 213);
+    --redSecondary: rgb(60, 107, 213);
+    --redTertiary: rgb(234, 237, 243);
     
     --tenPadding: 0% 10%;
 }
@@ -38,7 +38,7 @@ header {
     position: fixed;
     display: grid;
     grid-template-columns: 300px 1fr 300px;
-    background-color: var(--redSecondary);
+    background-color: var(--redTertiary);
     top: 0;
     right: 0;
     left: 0;
@@ -76,7 +76,15 @@ header {
     border-radius: 20px;
     padding: 5%;
     margin: 5%;
-    background-color: var(--redTertiary);
+    background-color: white;
+}
+
+input {
+    border: none;
+    font-size: 1.1rem;
+    resize: none;
+    outline: none;
+    width: 100%;
 }
 
 #magnify {
@@ -91,11 +99,12 @@ header {
 
 .honkerText {
     font-weight: 700;
+    font-size: 1.3rem;
+    color: black;
 }
 
 .honkerText:hover {
-    color: var(--redPrimary);
-    font-weight: 900;
+    font-size: 1.7rem;
 }
                     /* HEADER ENDS */
 
@@ -225,7 +234,7 @@ a:active {
     margin: 2px;
     padding: 10px;
     border: rgb(154, 153, 153) solid 1px;
-    border-radius: 5%;
+    border-radius: 20px;
     display: flex;
     align-content: center;
     align-items: center;
@@ -273,8 +282,8 @@ margin-right: 5px;
 }
 
 .postHonk:hover {
-    border: solid var(--redTertiary) 2px;
-    background: var(--redTertiary);
+    border: solid var(--redPrimary) 2px;
+    background: white;
     color: var(--redPrimary);
     font-weight: 700;
 }
@@ -362,7 +371,7 @@ em {
     display: grid;
     grid-template-columns: auto 70px;
     margin: 20px 5px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .honkening img {

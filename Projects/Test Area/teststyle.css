@@ -6,10 +6,10 @@ a, a:hover, a:focus, a:active {
 
 * {
     padding:0;
-    margin:0;
+    margin:5px;
     box-sizing: border-box;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-    color: rgb(242, 211, 216);
+    /* color: rgb(242, 211, 216); */
     scroll-behavior: smooth;
 }
 
@@ -50,4 +50,9 @@ a, a:hover, a:focus, a:active {
 
 .project {
     text-transform: uppercase;
+}
+
+.user-input {
+    padding: 10% 30%;
+    color: rgb(107, 34, 34);
 }

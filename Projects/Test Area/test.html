@@ -24,7 +24,101 @@
          <!-- <div class="text">
                     <div class="name">Richard M</div>
                     <div class="project">Coding Projects</div> -->
-         </div>
+         <!-- </div> -->
+        </div>
+
+        <div class="user-input">
+ 
+            <form>
+                <label for="email">
+                    Email:
+                    <input type="email" id="email" name="email" required placeholder="Your Email Address" />  
+                </label>
+    
+                <label for="password">
+                    Password:
+                    <input type="password" id="password" name="password" required minlength="8"/>
+                </label>
+    
+                <label for="password-retype">
+                    Retype Password:
+                    <input type="password" id="password-retype" name="password-retype" required/>
+                </label> 
+    
+                <button for="submit">
+                    Submit
+                </button>
+            </form>
+
+            <hr>
+
+            Personal Information <br>
+
+            <label for="dob">
+                Last time you said "Wow"?
+                <input type="date" name="dob" />
+            </label> <br>
+
+            <label for="location">
+                Location of best Cat?
+                <select name="city">
+                    <option value="lon">Oxford</option>
+                    <option value="gla">Outside Oxford</option>
+                    <option value="car">Off Planet</option>
+                </select>
+            </label> <br>
+
+            <label for="fave-color">
+                Second Favorite Color?
+                <input type="color" name="fave-color" />
+            </label>
+
+            <hr>
+
+            Do you agree to the Terms and Conditions you haven't read? <br>
+            <label for="terms-agree">
+                <input type="radio" name="terms" value="Agree" />
+                Sure
+            </label>
+
+            <br>
+
+            <label for="terms-disagree">
+                <input type="radio" name="terms" value="Disagree" />
+                Absolutely Not
+            </label> <br>
+
+            <label for="terms-eula">
+                <input type="radio" name="terms" value="eula" />
+                I'm still not sure what a EULA even is.
+            </label>
+
+            <br>
+
+            <button for="submit">
+                Submit
+            </button>
+
+            <hr>
+
+            <label for="agree">
+                agree
+                <input type="checkbox" name="agree" />
+            </label>
+
+
+            <hr>
+
+            <input type="number" name="age" />
+
+            <input type="date" name="event-date" />
+
+      
+
+            <input type="file" name="screenshot" />
+
+            <input type="number" name="age" />
+
         </div>
 
         <script src="" async defer></script>

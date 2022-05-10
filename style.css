@@ -96,7 +96,8 @@ header img {
     text-align: center;
 }
 
-.project-gallery:hover {
+.project-gallery:hover,
+.project-gallery:active {
     background: var(--colorSecondary);
     color: var(--colorPrimary);
     text-decoration: underline;
@@ -166,10 +167,25 @@ b {
     display: inline;
 }
 
-p {
-    padding: 3% 3% 7% 3%;
-    /* display: flex;
-    align-content: center; */
+.card-text {
+    padding: 3% 3% 3% 3%;
+}
+
+.card-gitlink {
+    padding: 3% 3% 3% 3%;
+    display: flex;
+    place-content: center;
+    height: 100%;
+    background: var(--colorPrimary);
+    color: var(--colorSecondary);
+    border-radius: 0px 0px 15px 15px;
+}
+
+.card-gitlink:hover {
+    background: var(--colorSecondary);
+    color: var(--colorPrimary);
+    text-decoration: underline;
+    font-weight: 600;
 }
 
   /* INDEX ENDS */
