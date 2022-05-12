@@ -1,0 +1,119 @@
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+* {
+    padding:0;
+    margin:5px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+
+body {
+    background-image: linear-gradient(to top right,rgb(89, 189, 223), rgb(202, 62, 242));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.user-input {
+    margin: 5%;
+    width: 40%;
+    height: min-content;
+    padding: 3%;
+    color: black;
+    background: white;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: auto;
+    place-items: center;
+}
+
+form {
+    width: 80%;
+}
+
+button,
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 20px;
+    border: none;
+    border-bottom: rgb(219, 208, 208) solid 2px;
+    cursor: pointer;
+}
+
+button {
+    margin-top: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.continue {
+    background-image: linear-gradient(to left,rgb(89, 189, 223), rgb(202, 62, 242));
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 30px;
+}
+
+@keyframes valid {
+    from {background-color: rgb(234, 209, 213);}    
+    to {background-color: rgb(221, 237, 221);}
+  }
+
+.continue:hover {
+    color: black;
+    background-image: linear-gradient(to left,rgb(176, 223, 238), rgb(230, 182, 243));
+    text-decoration: underline;
+}
+
+::placeholder {
+    color: rgb(181, 177, 177);
+    font-size: 1.3rem;
+}
+
+select {
+    font-size: 1.3rem;
+}
+
+input:focus:valid {
+    /* background-color: rgb(221, 237, 221); */
+    animation-name: valid;
+    animation-duration: 1s;
+}
+
+input:focus:invalid {
+    background-color: rgb(234, 209, 213);
+  }
+
+  nav{
+      padding: 20px;
+  }
+
+
+
+
