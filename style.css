@@ -24,6 +24,7 @@ header, footer {
     background: var(--colorPrimary);
     width: 100%;
     z-index: 1;
+    opacity: 1;
 }
 
 header {
