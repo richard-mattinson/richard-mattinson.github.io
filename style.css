@@ -24,7 +24,6 @@ header, footer {
     background: var(--colorPrimary);
     width: 100%;
     z-index: 1;
-    opacity: 1;
 }
 
 header {
@@ -115,7 +114,9 @@ header img {
   }
   
   .cards {
-      grid-template-rows: auto 1fr 4fr;
+      display: grid;
+      grid-template-rows: auto auto 4fr 200px 40px;
+      position: relative;
   }
 
   .card {
@@ -173,10 +174,13 @@ b {
 }
 
 .card-gitlink {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
     padding: 3% 3% 3% 3%;
     display: flex;
     place-content: center;
-    height: 100%;
+    width: 100%;
     background: var(--colorPrimary);
     color: var(--colorSecondary);
     border-radius: 0px 0px 15px 15px;
