@@ -128,7 +128,6 @@ header {
     padding-left: 50px;
     padding-top: 10px;
     color: var(--cltText);
-
 }
 
 .menu__logo:hover,
@@ -255,13 +254,15 @@ h3 {
     padding-left: 5px;
 }
 
-.tile__artwork {
+.tile__artwork,
+.tile__portrait {
     position: relative;
     float: left;
     cursor: pointer;
 }
 
-.tile__artwork .fa-circle-play {
+.tile__artwork .fa-circle-play,
+.tile__portrait .fa-circle-plus {
     visibility: hidden;
     position: absolute;
     left: 45px;
@@ -269,16 +270,19 @@ h3 {
     font-size: 5rem;
 }
 
-.tile__artwork:hover .fa-circle-play {
+.tile__artwork:hover .fa-circle-play,
+.tile__portrait:hover .fa-circle-plus {
     visibility: visible;
 }
 
-.fa-circle-play:hover .tile__artwork img {
+.tile__artwork img:hover,
+.tile__portrait img:hover {
     filter: brightness(75%);
 }
 
-.tile__artwork img:hover {
-        filter: brightness(75%);
+/* FIX ME!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.fa-circle-play:hover ~ .tile__artwork img {
+    filter: brightness(75%);
 }
 
 .recent__carousel,
@@ -312,6 +316,7 @@ h3 {
     width: 170px;
     height:170px;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .similar__carousel {
@@ -430,6 +435,10 @@ footer {
 display: none;
 }
 
+.main {
+    padding:100px 0px 100px 120px;
+}
+
 .container {
     grid-template-columns: 1px auto;
 }
@@ -454,20 +463,20 @@ display: none;
 
 @media screen and (max-width: 750px) {
 
-    .main__category ul {
-        font-size: 0.6rem;
-        }
+    .main {
+        grid-template-rows: auto;
+    }
+
+    .main__category {
+        font-size: 0.7rem;
+    }
         
     .menu__text,
     .menu__playlists,
     .user__break,
-    .fa-list-ul,
-    .fa-display {
+    #list,
+    #display {
     display: none;
-    }
-    
-    .container {
-        grid-template-columns: 1px auto;
     }
     
     .menu {
@@ -487,12 +496,12 @@ display: none;
     
     .player__current {
         display: grid;
-        grid-template-columns: 25px 80px 20px 20px;
+        grid-template-columns: 0px 80px 20px 20px;
         font-size: 0.6rem;
     }
     
     .current__artwork img {
-        width: 20px;
+        display: none;
     }
     
     
@@ -517,6 +526,43 @@ display: none;
         border-radius: 2px;
         border: 2px solid var(--cltText);
     }
+}
+
+@media screen and (max-width: 600px) {
+
+    .container {
+        grid-template-columns: 0px auto;
     }
+
+    .menu {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    
+    .menu__logo,
+    .menu__home,
+    .menu__search,
+    .menu__library {
+        padding-left: 10px;
+    }
+    
+    .menu__logo,
+    .playlists__new {
+        padding-left: 10px;
+    }
+    
+    .menu__logo {
+        font-size: 1.5rem;
+    }
+    
+    footer {
+        grid-template-columns: 3fr 1fr;
+        place-content: center;
+    }
+
+    .player__current {
+        display: none;
+    }     
+}
 
 /* MEDIA QUERIES END */
